@@ -12,8 +12,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'thin'
-gem 'sqlite3'
 group :development do
+  gem 'sqlite3'
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
   gem 'quiet_assets'
