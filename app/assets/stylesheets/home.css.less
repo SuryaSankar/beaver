@@ -2,8 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#masthead {
-background-image:url('/assets/red2.jpg');
-color: #c9c7a7;
 
+.rounded-corners (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
 }
+
+.round-mast-box (@height:200px ){
+	.rounded-corners(10px);
+	height: @height;
+	background-color:#2F6C75;
+	-webkit-box-shadow: #B3B3B3 5px 5px 5px;
+	-moz-box-shadow: #B3B3B3 5px 5px 5px;
+	box-shadow: #B3B3B3 5px 5px 5px;
+	h1 {
+	    font-family: 'Allerta', Helvetica, Arial, sans-serif;
+	    font-size: 50px;
+	    line-height: 55px;
+	}
+	 
+	p {
+	    font-family: 'Crimson Text', Georgia, Times, serif;
+	    font-size: 16px;
+	    line-height: 25px;
+	}
+}
+
+#masthead1{
+	.round-mast-box(250px);
+}
+
+#masthead2{
+	.round-mast-box(200px);
+}
+
+#masthead3{
+	.round-mast-box(200px);
+}
+
