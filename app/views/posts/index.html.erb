@@ -2,7 +2,7 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<div class="span6">
+<div class="row span6">
     <% @posts.sort_by { |post| post.created_at }.reverse.each do |post| %>
     
         <h2><%= post.title %></h2>
@@ -10,8 +10,11 @@
         <%= post.created_at.strftime("%b %d, %Y") %>
         <hr width=60%> 
     <% end %>
-</div>
+<% if admin? %>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_post_path,
             :class => 'btn btn-primary' %>
+<% end %>
+</div>
+
 

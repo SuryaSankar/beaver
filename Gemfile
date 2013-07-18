@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'thin'
+gem 'bcrypt-ruby', '~> 3.0.0', :require => 'bcrypt'  
 group :development do
   gem 'sqlite3'
   gem 'better_errors'
