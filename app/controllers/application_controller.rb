@@ -10,13 +10,17 @@ class ApplicationController < ActionController::Base
   end 
 
   def admin?
-	current_user.admin
+	if current_user.nil?
+		false
+	else
+		current_user.admin
+	end
   end
 
   def authorize
 	unless admin?
 		flash[:error]="Unauthorized access"
-		redirect_to home_path
+		redirect_to root_path
 		false
 	end
   end

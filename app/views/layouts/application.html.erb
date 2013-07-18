@@ -52,6 +52,9 @@
               <li><%= link_to "Home", root_path  %></li>
               <li><%= link_to "Blog", posts_path  %></li>
               <li><%= link_to "About Us", pages_about_path  %></li>
+	      <% if admin? %>
+              <li><%= button_to "Sign Out", session_path(session[:user_id]), {method: :delete , class: "btn"}  %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
