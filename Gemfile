@@ -14,10 +14,6 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'thin'
 gem 'bcrypt-ruby', '~> 3.0.0', :require => 'bcrypt' 
 gem 'redcarpet'
-gem 'pygmentize'
-gem 'pygments.rb'
-gem 'albino'
-gem 'nokogiri'
  
 group :development do
   gem 'sqlite3'
