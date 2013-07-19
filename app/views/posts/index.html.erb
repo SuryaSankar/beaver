@@ -6,7 +6,7 @@
     <% @posts.sort_by { |post| post.created_at }.reverse.each do |post| %>
     
         <h2><%= post.title %></h2></br>
-        <div><%= raw markdown post.description %></div>
+        <%= raw markdown post.description %>
         <%= post.created_at.strftime("%b %d, %Y") %>
         <hr width=60%> 
     <% end %>
