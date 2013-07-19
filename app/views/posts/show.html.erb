@@ -7,7 +7,7 @@
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @post.title %></dd>
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @post.description %></dd>
+  <dd><%= raw markdown @post.description %></dd>
 </dl>
 
 <div class="form-actions">
