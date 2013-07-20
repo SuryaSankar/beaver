@@ -37,6 +37,7 @@
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag '/assets/favicon.ico', :rel => 'shortcut icon' %>
 
+
   </head>
   <body>
     <%= content_for?(:blog_scripts) ? yield(:blog_scripts) : "" %>
@@ -66,8 +67,7 @@
     <div class="container allerta-crimson-font">
 	<%= yield %>
 
-      <footer class="row span12">
-        
+      <footer class="row span12">      
       </footer>
 
     </div> <!-- /container -->
@@ -75,6 +75,10 @@
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+ <script type="text/javascript">
+  MathJax.Hub.Configured();
+MathJax.Hub.Queue(["Typeset",MathJax.Hub]); 
+</script> 
     <%= javascript_include_tag "application" %>
 
   </body>
