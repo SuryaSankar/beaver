@@ -13,6 +13,7 @@ gem 'simple_form', '>= 3.0.0.rc'
 gem 'thin'
 gem 'bcrypt-ruby', '~> 3.0.0', :require => 'bcrypt' 
 gem 'redcarpet'
+gem 'thin'
  
 group :development do
   gem 'sqlite3'
@@ -20,8 +21,9 @@ group :development do
   gem 'binding_of_caller', :platforms=>[:mri_19, :rbx]
   gem 'quiet_assets'
 end
-
 group :production do
-  gem 'pg'
-  gem 'rails_12factor'
+  gem 'pg' # dont want sqlite in production
+  #gem 'unicorn' # make sure you follow installation instructions for this gem
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
