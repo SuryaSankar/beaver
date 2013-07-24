@@ -1,7 +1,14 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.post_description{
-	height: 500px;
+@retrored: #AB2D17;
+@retrobrown: #AF9246;
+#post-title{
+	    font-family: 'Allerta', Helvetica, Arial, sans-serif;
+	    font-size: 30px;
+	    line-height: 50px;
+		a:link {color: @retrored;}      /* unvisited link */
+		a:visited {color: @retrobrown;}  /* visited link */
+		a:hover {color: @retrobrown;}  /* mouse over link */
+		a:active {color: @retrobrown;}  /* selected link */
+}
+#post-description{
+	padding-top: 5px;
 }

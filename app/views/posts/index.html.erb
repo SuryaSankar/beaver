@@ -3,10 +3,10 @@
 <% end %>
 
 <% @posts.sort_by { |post| post.created_at }.reverse.each do |post| %>
-	<h2><%= link_to post.title, post_path(post.id) %></h2>
+	<div id="post-title"><%= link_to post.title, post_path(post.id) %></div>
 	<%= raw markdown post.description %>
 	<%= post.created_at.strftime("%b %d, %Y") %>
-	<hr width=60%> 
+	<hr width=100%> 
 <% end %>
 
 <% if admin? %>
