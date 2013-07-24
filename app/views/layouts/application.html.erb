@@ -51,9 +51,13 @@
           <a class="brand" href="#">Wheel N' Axle</a>
           <div class="container nav-collapse">
             <ul class="nav pull-right">
+<li class="divider-vertical"></li>
               <li><%= link_to "Home", root_path  %></li>
+<li class="divider-vertical"></li>
               <li><%= link_to "Blog", posts_path  %></li>
+<li class="divider-vertical"></li>
               <li><%= link_to "About Us", pages_about_path  %></li>
+<li class="divider-vertical"></li>
 	      <% if admin? %>
               <li><%= button_to "Sign Out", session_path(session[:user_id]), {method: :delete , class: "btn"}  %></li>
               <% end %>
@@ -63,7 +67,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container allerta-font">
 	<%= yield %>
 
       <footer class="row span12">      
