@@ -4,7 +4,9 @@
 
 <% @posts.sort_by { |post| post.created_at }.reverse.each do |post| %>
 	<div id="post-title"><%= link_to post.title, post_path(post.id) %></div>
+	<div class="font15">
 	<%= raw markdown post.description %>
+	</div>
 	<%= post.created_at.strftime("%b %d, %Y") %>
 	<hr width=100%> 
 <% end %>
