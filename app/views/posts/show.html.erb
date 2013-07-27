@@ -9,10 +9,12 @@
 <div class="font11">
 <%= raw markdown @post.description %>
 </div>
+<div class="row span12">
 <%= render partial: 'fblike' %>
-<%= render partial: 'disqus' %>
+</div>
+<div class="row span12">
 <%= render partial: 'fbcomments' %>
-    
+</div>   
 <% if admin? %>
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
