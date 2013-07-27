@@ -4,9 +4,9 @@
   <h1><%= @post.title %></h1>
 </div>
 
-
+<div class="font10">
 <%= raw markdown @post.description %>
-
+</div>
 <% if admin? %>
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
