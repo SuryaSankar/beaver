@@ -9,14 +9,19 @@
 <div class="row span12 font11">
 <%= raw markdown @post.description %>
 </div>
+<hr width=100%> 
 <div class="row span12">
 <%= render partial: 'fblike' %>
 </div>
 <div class="row span12">
+<%= render partial: 'tweet' %>
+</div>
+<hr width=100%> 
+<div class="row span12">
 <%= render partial: 'fbcomments' %>
 </div>   
 <% if admin? %>
-<div class="form-actions">
+<div class="row span12 form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               posts_path, :class => 'btn'  %>
   <%= link_to t('.edit', :default => t("helpers.links.edit")),
