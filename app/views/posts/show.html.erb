@@ -2,11 +2,11 @@
  <%= render partial: 'scripts' %>
  <%= render partial: 'fbjsinclude' %>
 <% end %>   
-<div class="page-header">
+<div class="row span12 page-header">
   <h1><%= @post.title %></h1>
 </div>
 
-<div class="font11">
+<div class="row span12 font11">
 <%= raw markdown @post.description %>
 </div>
 <div class="row span12">
