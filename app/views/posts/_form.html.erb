@@ -1,5 +1,6 @@
 <%= simple_form_for @post, :html => { :class => 'form-vertical row span12' } do |f| %>
   <%= f.input :title %>
+ <%= f.input :summary, as: :text , input_html: { class: "post-summary row span12"} %>
   <%= f.input :description, as: :text , input_html: { class: "post-description row span12"} %>
   <div class="form-actions">
     <%= f.button :submit, :class => 'btn-primary' %>
