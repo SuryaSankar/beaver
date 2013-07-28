@@ -3,15 +3,18 @@
 <% end %>
 
 <% @posts.sort_by { |post| post.created_at }.reverse.each do |post| %>
-	<div class="row"><div id="post-title" class="span12"><%= post.title %></div></div>
-	<div class="row"><div class="span12 font11">
-	<% if post.summary.nil? %>
-         <%= raw markdown post.description %>
-         <% else %>
-         <%= raw markdown post.summary %>
-         <% end %></div></div>
-	<div class="row"><div class="span12 font11"><%= link_to "Read and provide your comments", post_path(post.id) %></div></div>
-	<hr width=100%> 
+	<% if post.publish or admin? %>
+		<div class="row"><div id="post-title" class="span12"><%= post.title %></div></div>
+		<div class="row"><div class="span12 font11">
+		<% if post.summary.nil? %>
+		 	<%= raw markdown post.description %>
+		<% else %>
+		 	<%= raw markdown post.summary %>
+		<% end %>
+		</div></div>
+		<div class="row"><div class="span12 font11"><%= link_to "Read and provide your comments", post_path(post.id) %></div></div>
+		<hr width=100%> 
+	<% end %>
 <% end %>
 
 <% if admin? %>
