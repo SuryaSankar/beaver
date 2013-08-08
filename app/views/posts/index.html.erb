@@ -12,7 +12,7 @@
 		 	<%= raw markdown post.summary %>
 		<% end %>
 		</div></div>
-		<div class="row"><div class="span12 font11"><%= link_to "Read and provide your comments", post_path(post.id) %></div></div>
+		<div class="row"><div class="span12 font11"><%= link_to "Read more", post_path(post.id), {class: "btn btn-info" } %></div></div>
 		<hr width=100%> 
 	<% end %>
 <% end %>
