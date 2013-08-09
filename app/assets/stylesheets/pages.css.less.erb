@@ -11,15 +11,15 @@ background-color: #DCCA98;
 }
 
 .fontsize(@size: 20px){
-	    font-size: 20px;
+	    font-size: @size;
 	    line-height: 1.5;
 }
 .font20{
 	.fontsize(20px);
 }
 
-.font15{
-	.fontsize(15px);
+.font18{
+	.fontsize(18px);
 }
 
 .font11{
@@ -31,9 +31,21 @@ background-color: #DCCA98;
 	    font-size: 50px;
 	    line-height: 1.5;
 }
+.allerta-headline2{
+	    font-family: 'Allerta', Helvetica, Arial, sans-serif;
+	    .fontsize(30px);
+}
 
+.allerta-headline3{
+	    font-family: 'Allerta', Helvetica, Arial, sans-serif;
+	    .fontsize(20px);
+}
 
 #mission{
+	padding-top:30px;
+}
+
+#followBox{
 	padding-top:50px;
 }
 
@@ -48,7 +60,12 @@ background-color: #DCCA98;
 	text-shadow: 0px 2px 3px #555;
 	
 }
-
+#progress{
+	padding-top: 20px;
+}
+paddingtop50{
+	padding-top: 50px;
+}
 .aboutbox{
 	padding-top: 50px;
 }
